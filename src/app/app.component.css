@@ -1,0 +1,24 @@
+body {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #46484a; }
+  
+  
+  .cover {
+    background: #2b2d34 url("src\assets\images\homeimg.jpg") center;
+    background-size: cover;
+    min-height: 50rem;
+    height: auto;
+    border-radius: 0;
+    width: 100%;
+    color: #fff;
+    padding-top: 1rem; }
+    
+    
+  
+    .navbar-brand{
+      color:rgb(60, 190, 20);
+      font-size: xx-large;
+    }
+  

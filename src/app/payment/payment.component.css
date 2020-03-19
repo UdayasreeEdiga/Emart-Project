@@ -1,0 +1,17 @@
+.bg-img{
+    background-image: url("src/assets/images/paybg2.jpg");
+    align-self: right;
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+    input[type=submit] {
+        background-color: rgb(136, 209, 238);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+    

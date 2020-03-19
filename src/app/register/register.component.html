@@ -1,0 +1,70 @@
+<html>
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+         EMART
+        </a>
+      </nav>
+<div class="bg-img">
+
+        <form class="text-center border border-light p-5" (ngSubmit)="save()" >
+        
+            <p class="h4 mb-4">REGISTER HERE</p>
+                <!-- <input type="text" id="FirstName" class="form-control mb-4" placeholder="First name"> -->
+                <input type="text" name="fnm1"[(ngModel)]="users.firstName" [(ngModel)]="user.firstName" placeholder="first Name" class="form-control"
+                         required="required" minlength="4"  #fnm="ngModel"/>
+                        <div  *ngIf="(fnm.touched||fnm.dirty)&&fnm.invalid">
+                            <small class="text-danger" *ngIf="fnm.errors.required">Can not be left blank</small>
+                            <small class="text-danger" *ngIf="fnm.errors.minlength">Can not be less than 4 characters</small>
+                        </div>
+               <br>
+                <!-- <input type="text" id="LastName" class="form-control mb-4" placeholder="Last name"> -->
+                <input type="text" name="lnm1"[(ngModel)]="users.lastName"  [(ngModel)]="user.lastName" placeholder="Last Name" class="form-control"
+                required="required" minlength="4" #lnm="ngModel"/>
+               <div  *ngIf="(lnm.touched||lnm.dirty)&&lnm.invalid">
+              <small   class="text-danger" *ngIf="lnm.errors.required">Can not be left blank</small>
+              <small  class="text-danger"  *ngIf="lnm.errors.minlength">Can not be less than 4 characters</small>
+               </div>
+                <br>
+                
+             <!-- <input type="email" id="Email" class="form-control mb-4" placeholder="E-mail" ng-required="true"> -->
+             <input type="text" name="email1"[(ngModel)]="users.email"   [(ngModel)]="user.email" class="form-control" placeholder="Email"
+                           required="required" min="" #email="ngModel"/>
+                        <div  *ngIf="(email.touched||email.dirty)&&email.invalid">
+                            <small  class="text-danger" *ngIf="email.errors.required">Can not be left blank</small>
+                            <small  class="text-danger" *ngIf="email.errors.min">It must contain @ symbol</small>
+                        </div>
+            <br>
+            
+            <!-- <input type="password" id="Password" class="form-control" placeholder="Password" aria-describedby="dPassword"> -->
+            <input type="password" name="pwd1"[(ngModel)]="users.password" placeholder="Password"  [(ngModel)]="user.password" class="form-control"
+                           required="required" min="" #pwd="ngModel"/>
+                        <div  *ngIf="(pwd.touched||pwd.dirty)&&email.invalid">
+                            <small  class="text-danger" *ngIf="pwd.errors.required">Can not be left blank</small>
+                            <small  class="text-danger" *ngIf="pwd.errors.min">It must contain one uppercase letter</small>
+                        </div>
+            <!-- <small id="dPassword" class="form-text text-muted mb-4">
+                At least 8 characters and 1 digit
+            </small> -->
+          
+            <!-- <input type="text" id="PPassword" class="form-control" placeholder="Phone number" aria-describedby="Phoneh">
+            <small id="Phoneh" class="form-text text-muted mb-4">
+                Optional - for two step authentication
+            </small> -->
+            <br>
+            <input type="text" name="phno1" [(ngModel)]="users.mobileno" class="form-control"  [(ngModel)]="user.mobileno" placeholder="Ph Number"
+                        required="required" min="10" #phno="ngModel"/>
+                  <div   *ngIf="(phno.touched||phno.dirty)&&phno.invalid">
+                      <small  class="text-danger" *ngIf="phno.errors.required">Can not be left blank</small>
+                      <small class="text-danger" *ngIf="phno.errors.min">Can not be less than 10</small>
+                  </div>
+              <br>
+            <button class="btn btn-info my-4 btn-primary" type="submit" >Sign in</button>
+        
+        
+        </form>
+        </div>
+        
+        </html>
+        
+
+

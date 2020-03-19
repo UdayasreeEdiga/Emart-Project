@@ -1,0 +1,93 @@
+ <nav class="navbar  navbar-light bg-light  fixed-top">
+
+  <a class="navbar-brand"><img src="assets\images\icon.png" width="100" height="100"></a>
+
+  <button type="button" class="navbar-toggler navbar-toggler-right bg-light" data-toggle="collapse" data-target="#nav">
+
+    <span class="navbar-toggler-icon my-toggler"></span>
+
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-between" id="nav">
+
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+
+        <a class="nav-link text-dark font-weight-bold px-3" href="#">HOME</a>
+
+      </li>
+      <li class="nav-item">
+
+        <a class="nav-link text-dark font-weight-bold px-3" href="fashion">FASHION</a>
+
+      </li>
+      <li class="nav-item">
+
+        <a class="nav-link text-dark font-weight-bold px-3" href="fsub">FURNITURE</a>
+
+      </li>
+
+      <li class="nav-item">
+
+        <a class="nav-link text-dark font-weight-bold px-3" href="esub">ELECTRONICS</a>
+
+      </li>
+
+
+      <li class="nav-item">
+
+        <a class="nav-link text-dark font-weight-bold px-3" href="cart">CART</a>
+
+      </li>
+
+      <li class="nav-item">
+
+        <a class="nav-link text-dark font-weight-bold px-3" href="contact">CONTACT</a>
+
+      </li>
+      <li class="nav-item">
+
+        <a class="nav-link text-dark font-weight-bold px-3" href="">LOGOUT</a>
+
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <form class="form-inline ml-auto">
+      <div class="md-form my-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </div>
+      <button href="#!" class="btn btn-light btn-md my-0 ml-sm-2" type="submit">Search</button>
+    </form>
+
+
+
+  </div>
+</nav> 
+<div class="bg-img">
+<div class="container">
+  <div class="row">
+    <h3 style="color:orange">Product List</h3>
+    
+    <div class="card-group">
+      <div class="card">
+        <div *ngFor="let product of products">
+
+          <img src="{{product.photo}}">
+
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}} {{product.price}}</h5>
+            <p class="card-text">Fashion is part of the daily air and it changes all the time, with all the events. You
+              can even see the approaching of a revolution in clothes. You can see and feel everything in clothes.</p>
+            <a class="btn btn-primary" [routerLink]="['/cart', { id:product.id }]">ADD TO CART</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.bg-img{
+    background-image: url("src/assets/images/whitebg2.jpg");
+    align-self: right;
+    min-height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+.card-body{
+    color:black;
+    }

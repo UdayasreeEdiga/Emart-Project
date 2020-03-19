@@ -1,0 +1,119 @@
+<nav class="navbar  navbar-light bg-light  fixed-top">
+     
+  <a class="navbar-brand"><img src="assets\images\icon.png" width="100" height="100"></a>
+
+  <button type="button" class="navbar-toggler navbar-toggler-right bg-light" data-toggle="collapse" data-target="#nav">
+
+      <span class="navbar-toggler-icon my-toggler"></span>
+
+  </button>
+
+<div class="collapse navbar-collapse justify-content-between" id="nav">
+
+  <ul class="navbar-nav">
+
+      <li class="nav-item" >
+
+           <a class="nav-link text-dark font-weight-bold px-3" href="#">HOME</a>
+
+      </li>
+        <li class="nav-item">
+
+          <a class="nav-link text-dark font-weight-bold px-3" href="fashion">FASHION</a>
+
+      </li>
+    <li class="nav-item">
+
+      <a class="nav-link text-dark font-weight-bold px-3" href="fsub">FURNITURE</a>
+
+    </li>
+  
+    <li class="nav-item">
+
+      <a class="nav-link text-dark font-weight-bold px-3" href="esub">ELECTRONICS</a>
+
+    </li>
+
+
+       <li class="nav-item">
+
+          <a class="nav-link text-dark font-weight-bold px-3" href="cart">CART</a>
+
+      </li>
+
+      <li class="nav-item">
+
+           <a class="nav-link text-dark font-weight-bold px-3" href="contact">CONTACT</a>
+
+        </li>
+        <li class="nav-item">
+     
+          <a class="nav-link text-dark font-weight-bold px-3" href="">LOGOUT</a>
+
+        </li>
+
+</ul>
+</div>
+
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  <form class="form-inline ml-auto">
+    <div class="md-form my-0">
+      <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    </div>
+    <button href="#!" class="btn btn-light btn-md my-0 ml-sm-2" type="submit">Search</button>
+  </form>
+
+
+
+</div>
+</nav>  
+<div class="bg-img">
+<div class="container">
+  <h3 style='color:orange'>Cart Information</h3>
+  <table class="table  table-striped"  >
+      <tr >
+         
+          <th>Id</th>
+          <br>
+          <th>Name</th>
+          <br>
+          <th>Photo</th>
+          <br>
+          <th>Price</th>
+          <br>
+          <th>Quantity</th>
+          <br>
+          <th>Sub Total</th>
+          <br>
+          <th>Remove</th>
+      </tr>
+      <tr *ngFor="let item of items">
+         
+          <td>{{item.product.id}}</td>
+          <br>
+          <td>{{item.product.name}}</td>
+          <br>
+          <td>
+              
+              <img src="{{item.product.photo}}" width="50">
+          </td>
+          <br>
+          <td>{{item.product.price}}</td>
+          <br>
+          <td>{{item.quantity}}</td>
+          <br>
+          <td>{{item.product.price * item.quantity}}</td>
+          <br>
+          <td>
+              <a (click)="remove(item.product.id)" class="btn btn-warning">Remove Item</a>
+          </td>
+      </tr>
+      <br>
+      <tr>
+          <td colspan="6" >Total</td>
+          <td>{{total}}</td>
+      </tr>
+  </table>
+  <button type="submit" routerLink="/payment" class="site-btn login-btn">check-out</button>
+  </div></div>
